@@ -1,0 +1,23 @@
+.container{
+    position: static;
+    border: 5px solid black;
+    padding: 25px;
+    margin: 50px;
+    height: 50vw;
+}
+.guessme{
+ 	text-align: center;
+ 	text-shadow: 2px 2px black;
+ 	font-family: serif;
+ 	font-size: 50px;
+}
+.displayword{
+
+	text-align: center;
+ 	font-family: serif;
+ 	font-size: 50px;
+ 	color: red
+}
+#not{
+	position: static;
+}

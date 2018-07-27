@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess Me !</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="style.css"/>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+      rel="stylesheet">
+</head>
+<body ng-app = "guessme" ng-controller = "gameController">
+
+<div class="container">
+	
+	<h1 class="guessme"> GUESS ME</h1>
+
+	<div class="displayword">{{ displayWord }}</div> <!-- Guess the word :  -->
+
+	<img id="not" src="not.jpg" width="100vw" height="100vw">
+
+
+	<div class="incorrect">
+		<span ng-repeat = "letter in incorrectLettersChosen">{{ letter }}</span> <!-- Incorrect guesses :: -->
+	</div>
+
+	<div>Guessess left : {{ guesses }}</div>
+
+	
+
+	<div>Correct guesses ::
+
+		<span ng-repeat = "letter in correctLettersChosen">{{ letter }}</span>
+	</div>
+
+
+	
+	<div> 
+		<input type="text" name="guess" ng-model="input.letter">
+		<button ng-click="letterChosen()">Submit</button>
+	</div>
+
+</div>
+
+
+</body>
+</html>
